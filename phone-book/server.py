@@ -6,8 +6,9 @@ from flask import Flask, jsonify
 server = Flask("Online Phonebook Running")
 
 phonebook = {"pepe": "53535353",
-             "octavio": "8888888",
+             "lukas": "8888888",
              "agata": "7777777",
+             "octavio": "88888",
              "david": "99999"}
 
 
@@ -22,10 +23,22 @@ def add_contact(phone, name):
     if name not in phonebook: 
         
         phonebook.update({name:phone})
-        return "you have added " + name + " with the phone number: " + phone
+        return jsonify("you have added " + name + " with the phone number: " + phone)
     
     else: 
-        return "you have already added " + name
+        return jsonify("you have already added " + name)
+    
+@server.route("/add-contact/<phone>/<name>", methods=["POST"])
+def add_contact_post(phone, name): 
+    
+    
+    if name not in phonebook: 
+        
+        phonebook.update({name:phone})
+        return jsonify("you have added " + name + " with the phone number: " + phone)
+    
+    else: 
+        return jsonify("you have already added " + name)
 
 
 @server.route("/get-phone/<name>")

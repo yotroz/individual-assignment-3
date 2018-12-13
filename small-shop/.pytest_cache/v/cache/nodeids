@@ -1,0 +1,8 @@
+[
+  "test_stock.py::test_after_one_potato_recalculations",
+  "test_stock.py::test_after_two_potato_recalculations",
+  "test_stock.py::test_after_one_cheese_recalculations",
+  "test_stock.py::test_after_two_cheese_recalculations",
+  "test_stock.py::test_after_unknown_product_recalculations",
+  "test_stock.py::test_after_unknown_product_recalculation_to_zero"
+]

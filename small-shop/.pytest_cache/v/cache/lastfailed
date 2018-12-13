@@ -1,0 +1,4 @@
+{
+  "test_stock.py::test_after_potato_recalculations": true,
+  "test_stock.py::test_product_not_defined_recalculations": true
+}
